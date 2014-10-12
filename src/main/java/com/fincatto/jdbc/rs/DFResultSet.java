@@ -20,11 +20,14 @@ public final class DFResultSet implements ResultSet {
     }
 
     private Map<String, Integer> mapTableColumnIndex(final ResultSet rs) throws SQLException {
-        final Map<String, Integer> columnMaps = new HashMap<>();
-        for (int i = 1; i <= rs.getMetaData().getColumnCount(); i++) {
-            columnMaps.put(getColumnKey(rs.getMetaData().getTableName(i), rs.getMetaData().getColumnName(i)), i);
+        final ResultSetMetaData rsmd = rs.getMetaData();
+        int columns = rsmd.getColumnCount();
+
+        final Map<String, Integer> map = new HashMap<>(columns);
+        for (int i = 1; i <= columns; i++) {
+            map.put(getColumnKey(rsmd.getTableName(i), rsmd.getColumnName(i)), i);
         }
-        return columnMaps;
+        return map;
     }
 
     static String getColumnKey(final String tableName, final String columnName) {
