@@ -27,7 +27,7 @@ public final class DFResultSet implements ResultSet {
         return columnMaps;
     }
 
-    private String getColumnKey(final String tableName, final String columnName) {
+    static String getColumnKey(final String tableName, final String columnName) {
         return String.format("%s.%s", tableName, columnName);
     }
 
@@ -39,6 +39,95 @@ public final class DFResultSet implements ResultSet {
         return this.getString(this.columns.get(getColumnKey(tableName, columnName)));
     }
 
+    public boolean getBoolean(final String tableName, final String columnName) throws SQLException {
+        return this.getBoolean(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public byte getByte(final String tableName, final String columnName) throws SQLException {
+        return this.getByte(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public short getShort(final String tableName, final String columnName) throws SQLException {
+        return this.getShort(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public long getLong(final String tableName, final String columnName) throws SQLException {
+        return this.getLong(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public float getFloat(final String tableName, final String columnName) throws SQLException {
+        return this.getFloat(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public double getDouble(final String tableName, final String columnName) throws SQLException {
+        return this.getDouble(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public BigDecimal getBigDecimal(final String tableName, final String columnName) throws SQLException {
+        return this.getBigDecimal(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public byte[] getBytes(final String tableName, final String columnName) throws SQLException {
+        return this.getBytes(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public Date getDate(final String tableName, final String columnName) throws SQLException {
+        return this.getDate(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public Time getTime(final String tableName, final String columnName) throws SQLException {
+        return this.getTime(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public Timestamp getTimestamp(final String tableName, final String columnName) throws SQLException {
+        return this.getTimestamp(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public InputStream getAsciiStream(final String tableName, final String columnName) throws SQLException {
+        return this.getAsciiStream(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public InputStream getUnicodeStream(final String tableName, final String columnName) throws SQLException {
+        return this.getUnicodeStream(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public InputStream getBinaryStream(final String tableName, final String columnName) throws SQLException {
+        return this.getBinaryStream(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public Object getObject(final String tableName, final String columnName) throws SQLException {
+        return this.getObject(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public URL getURL(final String tableName, final String columnName) throws SQLException {
+        return this.getURL(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public RowId getRowId(final String tableName, final String columnName) throws SQLException {
+        return this.getRowId(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public NClob getNClob(final String tableName, final String columnName) throws SQLException {
+        return this.getNClob(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public SQLXML getSQLXML(final String tableName, final String columnName) throws SQLException {
+        return this.getSQLXML(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public String getNString(final String tableName, final String columnName) throws SQLException {
+        return this.getNString(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public Reader getNCharacterStream(final String tableName, final String columnName) throws SQLException {
+        return this.getNCharacterStream(this.columns.get(getColumnKey(tableName, columnName)));
+    }
+
+    public <T> T getObject(final String tableName, final String columnName, Class<T> type) throws SQLException {
+        return this.getObject(this.columns.get(getColumnKey(tableName, columnName)), type);
+    }
+
+    //wrappers
     @Override
     public boolean next() throws SQLException {
         return this.rs.next();
