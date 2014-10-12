@@ -16,12 +16,15 @@ public final class DFResultSet implements ResultSet {
 
     public DFResultSet(ResultSet rs) throws SQLException {
         this.rs = rs;
+        this.columns = mapTableColumnIndex(rs);
+    }
 
-        //create a hashmap with column index map
-        this.columns = new HashMap<>();
+    private Map<String, Integer> mapTableColumnIndex(final ResultSet rs) throws SQLException {
+        final Map<String, Integer> columnMaps = new HashMap<>();
         for (int i = 1; i <= rs.getMetaData().getColumnCount(); i++) {
-            this.columns.put(getColumnKey(rs.getMetaData().getTableName(i), rs.getMetaData().getColumnName(i)), i);
+            columnMaps.put(getColumnKey(rs.getMetaData().getTableName(i), rs.getMetaData().getColumnName(i)), i);
         }
+        return columnMaps;
     }
 
     private String getColumnKey(final String tableName, final String columnName) {
@@ -31,7 +34,6 @@ public final class DFResultSet implements ResultSet {
     public int getInt(final String tableName, final String columnName) throws SQLException {
         return this.getInt(this.columns.get(getColumnKey(tableName, columnName)));
     }
-
 
     public String getString(final String tableName, final String columnName) throws SQLException {
         return this.getString(this.columns.get(getColumnKey(tableName, columnName)));
@@ -224,12 +226,12 @@ public final class DFResultSet implements ResultSet {
 
     @Override
     public String getCursorName() throws SQLException {
-        return this.getCursorName();
+        return this.rs.getCursorName();
     }
 
     @Override
     public ResultSetMetaData getMetaData() throws SQLException {
-        return this.getMetaData();
+        return this.rs.getMetaData();
     }
 
     @Override
@@ -754,7 +756,7 @@ public final class DFResultSet implements ResultSet {
 
     @Override
     public int getHoldability() throws SQLException {
-        return 0;
+        return this.rs.getHoldability();
     }
 
     @Override
