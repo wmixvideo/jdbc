@@ -77,8 +77,8 @@ Extends the standard ResultSet interface, adding features like searching by tabl
          try (DFResultSet rs = new DFResultSet(stmt.executeQuery("select * from person p join client c on (c.id_person = p.id)"))) {
              final List<Client> clients = new ArrayList<>();
              while (rs.next()) {
-                 final Client client = parseCliente(rs, "client");
-                 client.setPerson(parsePessoa(rs, "person"));
+                 final Client client = parseClient(rs, "client");
+                 client.setPerson(parsePerson(rs, "person"));
                  clients.add(client);
              }
              for(Client client : clients) {
@@ -92,20 +92,20 @@ Extends the standard ResultSet interface, adding features like searching by tabl
  ```
  
  ```java
- private static Person parsePessoa(final DFResultSet rs, final String tabela) throws SQLException {
+ private static Person parsePerson(final DFResultSet rs, final String tableName) throws SQLException {
      final Person person = new Person();
-     person.setId(rs.getInt(tabela, "id"));
-     person.setName(rs.getString(tabela, "name"));
+     person.setId(rs.getInt(tableName, "id"));
+     person.setName(rs.getString(tableName, "name"));
      return person;
  }
  ```
  
  ```java
- private static Client parseCliente(final DFResultSet rs, final String tabela) throws SQLException {
+ private static Client parseClient(final DFResultSet rs, final String tableName) throws SQLException {
      final Client client = new Client();
-     client.setId(rs.getInt(tabela, "id"));
-     client.setTradingName(rs.getString(tabela, "trading_name"));
-     client.setPerson(new Person(rs.getInt(tabela, "id_person")));
+     client.setId(rs.getInt(tableName, "id"));
+     client.setTradingName(rs.getString(tableName, "trading_name"));
+     client.setPerson(new Person(rs.getInt(tableName, "id_person")));
      return client;
  }
  ```
