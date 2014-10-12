@@ -27,7 +27,7 @@ Designed with compatibility in mind, extending the JDBC standard protocols, can 
 
 ##Classes
 ###DFResultSet
-Extends the standard ResultSet interface, adding features like searching by table name + field.
+Extends the standard ResultSet interface, adding features like searching by table + column.
 
 ###How to use
 ####Creating the sql structure:
