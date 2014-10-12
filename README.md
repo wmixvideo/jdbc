@@ -6,7 +6,7 @@ The JDBC library is a non-intrusive way to facilitate the development of Java so
 
 Allied with the DAO pattern, it helps achieve maximum productivity and performance by allowing developers to write unique queries and iterate over the SQLs results with columns with same name present in different tables.
 
-##Instalation
+##Installation
 The JDBC library can be used simply putting the project jar into your classpath, or using maven:
 
 ```xml
