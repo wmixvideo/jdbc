@@ -19,7 +19,7 @@ public final class DFResultSet implements ResultSet {
         this.columns = mapTableColumnIndex(rs);
     }
 
-    private Map<String, Integer> mapTableColumnIndex(final ResultSet rs) throws SQLException {
+    static Map<String, Integer> mapTableColumnIndex(final ResultSet rs) throws SQLException {
         final ResultSetMetaData rsmd = rs.getMetaData();
         int columns = rsmd.getColumnCount();
 
