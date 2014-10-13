@@ -22,6 +22,14 @@ The JDBC library can be used simply putting the project jar into your classpath,
 </repositories>
 ```
 
+```xml
+<dependency>
+    <groupId>com.fincatto</groupId>
+    <artifactId>jdbc</artifactId>
+    <version>1.0.2</version>
+</dependency>
+```
+
 ##Compatibility
 Designed with compatibility in mind, extending the JDBC standard protocols, can be used with any relational database. 
 
@@ -191,3 +199,19 @@ Extends the standard ResultSet interface, adding features like searching by tabl
  }
  ```
 
+###Known issues
+If you are using MSSqlServer with jtds, set this on your connection string:
+
+```code
+useCursors=true
+```
+
+```url
+http://sourceforge.net/p/jtds/bugs/546/
+```
+
+Thanks to
+
+```url
+http://stackoverflow.com/users/148088/fernando-pinheiro
+```
