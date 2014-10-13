@@ -206,12 +206,7 @@ If you are using MSSqlServer with jtds, set this on your connection string:
 useCursors=true
 ```
 
-```url
-http://sourceforge.net/p/jtds/bugs/546/
-```
+[JDTSBug]: <http://sourceforge.net/p/jtds/bugs/546/>  "Bug JTDS"
 
 Thanks to
-
-```url
-http://stackoverflow.com/users/148088/fernando-pinheiro
-```
+[TKSFernando]: <http://stackoverflow.com/users/148088/fernando-pinheiro>  "Fernando Pinheiro"
