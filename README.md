@@ -3,6 +3,7 @@ JDBC Helper
 
 ##About
 The JDBC library is a non-intrusive way to facilitate the development of Java software.
+[![Coverage Status](https://coveralls.io/repos/wmixvideo/jdbc/badge.svg?branch=master&service=github)](https://coveralls.io/github/wmixvideo/jdbc?branch=master)
 
 Allied with the DAO pattern, it helps achieve maximum productivity and performance by allowing developers to write unique queries and iterate over the SQLs results with columns with same name present in different tables.
 
