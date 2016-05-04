@@ -1,12 +1,7 @@
 node {
-  stage 'Clean'
+  stage 'Build'
   checkout scm
-  sh 'mvn clean'
-}
-node {
-  stage 'Package'
-  checkout scm
-  sh 'mvn package -U'
+  sh 'mvn clean package -U'
 }
 
 parallel 'quality scan': {
