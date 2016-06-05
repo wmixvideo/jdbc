@@ -3,10 +3,9 @@
   <groupId>com.fincatto</groupId>
   <artifactId>jdbc</artifactId>
   <versioning>
-    <release>1.0.2</release>
     <versions>
-      <version>1.0.2</version>
+      <version>1.0.3-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20141012153936</lastUpdated>
+    <lastUpdated>20160605231539</lastUpdated>
   </versioning>
 </metadata>
