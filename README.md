@@ -14,7 +14,7 @@ The JDBC library can be used simply putting the project jar into your classpath,
 <repositories>
     <repository>
         <id>jdbc-mvn-repo</id>
-        <url>https://raw.github.com/fincatto/jdbc/mvn-repo/</url>
+        <url>https://raw.github.com/wmixvideo/jdbc/mvn-repo/</url>
         <snapshots>
             <enabled>true</enabled>
             <updatePolicy>always</updatePolicy>
@@ -27,7 +27,7 @@ The JDBC library can be used simply putting the project jar into your classpath,
 <dependency>
     <groupId>com.fincatto</groupId>
     <artifactId>jdbc</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3-SNAPSHOT</version>
 </dependency>
 ```
 
