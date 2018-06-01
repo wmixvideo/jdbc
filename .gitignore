@@ -18,3 +18,9 @@ target/
 
 # mac
 .DS_Store
+
+# vscode
+.vscode
+.classpath
+.project
+.settings
