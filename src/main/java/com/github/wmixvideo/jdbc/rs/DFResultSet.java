@@ -1,4 +1,4 @@
-package com.fincatto.jdbc.rs;
+package com.github.wmixvideo.jdbc.rs;
 
 import java.io.InputStream;
 import java.io.Reader;

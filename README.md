@@ -2,12 +2,12 @@ JDBC Helper
 ====
 [![Coverage Status](https://coveralls.io/repos/wmixvideo/jdbc/badge.svg?branch=master&service=github)](https://coveralls.io/github/wmixvideo/jdbc?branch=master)
 
-##About
+## About
 The JDBC library is a non-intrusive way to facilitate the development of Java software.
 
 Allied with the DAO pattern, it helps achieve maximum productivity and performance by allowing developers to write unique queries and iterate over the SQLs results with columns with same name present in different tables.
 
-##Installation
+## Installation
 The JDBC library can be used simply putting the project jar into your classpath, or using maven:
 
 ```xml
@@ -31,15 +31,15 @@ The JDBC library can be used simply putting the project jar into your classpath,
 </dependency>
 ```
 
-##Compatibility
+## Compatibility
 Designed with compatibility in mind, extending the JDBC standard protocols, can be used with any relational database. 
 
-##Classes
-###DFResultSet
+## Classes
+### DFResultSet
 Extends the standard ResultSet interface, adding features like searching by table + column.
 
-###How to use
-####Creating the sql structure:
+### How to use
+#### Creating the sql structure:
  
  ```sql
  CREATE TABLE person (
@@ -78,7 +78,7 @@ Extends the standard ResultSet interface, adding features like searching by tabl
  join client c on (c.id_person = p.id);
  ```
 
-####Example
+#### Example
 
  ```java
  public static void main(String[] args) {
@@ -200,7 +200,7 @@ Extends the standard ResultSet interface, adding features like searching by tabl
  }
  ```
 
-###Known issues
+### Known issues
 If you are using MSSqlServer with jtds, set this on your connection string:
 
 ```code
@@ -209,5 +209,5 @@ useCursors=true
 
 [JDTSBug]: <http://sourceforge.net/p/jtds/bugs/546/> "Bug JTDS"
 
-##Thanks
+## Thanks
 [Fernando Pinheiro](http://stackoverflow.com/users/148088/fernando-pinheiro) (homologation and tests)

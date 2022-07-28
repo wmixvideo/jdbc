@@ -1,4 +1,4 @@
-package com.fincatto.jdbc.rs;
+package com.github.wmixvideo.jdbc.rs;
 
 import org.junit.Assert;
 import org.junit.Test;
