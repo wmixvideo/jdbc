@@ -9,26 +9,12 @@ Allied with the DAO pattern, it helps achieve maximum productivity and performan
 
 ## Installation
 The JDBC library can be used simply putting the project jar into your classpath, or using maven:
-
-```xml
-<repositories>
-    <repository>
-        <id>jdbc-mvn-repo</id>
-        <url>https://raw.github.com/wmixvideo/jdbc/mvn-repo/</url>
-        <snapshots>
-            <enabled>true</enabled>
-            <updatePolicy>always</updatePolicy>
-        </snapshots>
-    </repository>
-</repositories>
-```
-
 ```xml
 <dependency>
-    <groupId>com.fincatto</groupId>
-    <artifactId>jdbc</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
-</dependency>
+  <groupId>com.github.wmixvideo</groupId>
+  <artifactId>jdbc</artifactId>
+  <version>1.0.4-SNAPSHOT</version>
+</dependency> 
 ```
 
 ## Compatibility
